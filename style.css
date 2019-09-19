@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  color: blue;
+  transition: .4s;
+
+
+}
+.container{
+  max-width: 1160px;
+  margin:  auto;
+  padding: 50px;
+}
+.head-text{
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.head-text .big-one{
+  font-size: 7rem;
+  font-weight: bolder;
+  margin: 50px 0;
+}
+
+
+#bibite-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.bibita *::first-letter{
+  text-transform: capitalize;
+}
+.bibita{
+  display: inline-block;
+  margin: 15px;
+  border: solid 2px rgb(218, 218, 218);
+  background: white;
+  padding-bottom: 0;
+  width: 350px;
+  border-radius: 13px;
+  transition: .4s;
+
+}
+.bibita .text{
+  padding:25px;
+}
+.up{
+  opacity: 0;
+  padding: 0 25px;
+  transition: 0.5s;
+  text-align:  right;
+  display: flex;
+  justify-content: space-between;
+  background: blue;
+  color: white;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+
+}
+.bibita:hover {
+  border-color:blue;
+}
+.bibita:hover .up {
+  opacity: 1;
+}
+.up p:hover{
+   cursor: pointer;
+}
+
+.nome-bibita{
+  font-size: 3rem;
+  margin:0
+}
