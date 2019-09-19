@@ -29,9 +29,29 @@
   </head>
   <body>
     <div class="container">
+
+
+
+
+
+
       <div class="head-text">
         <h1 class="big-one">bibite</h1>
         <h4 class="btn-add">Add drink</h4>
+
+        <div class="form">
+          <div class="form-content">
+            <p>Nome</p>
+            <input type="text" id="new-nome">
+            <p>Prezzo</p>
+            <input type="number" id="new-prezzo">
+            <p>Marca</p>
+            <input type="text" id="new-company">
+            <p>Scadenza</p>
+            <input type="date" id="new-scadenza">
+            <a class="btn-send">ADD ITEM</a>
+          </div>
+        </div>
       </div>
 
 
@@ -53,7 +73,7 @@
           <div class="bibita" data-id="{{id}}">
               <div class="text">
                 <h2 class="nome-bibita">{{nome}}</h2>
-                <h3>prezzo : {{prezzo}}</h3>
+                <h3 class="price">prezzo : ${{prezzo}}</h3>
                 <h5>{{marca}}</h5>
                 <p>scadenza : {{scadenza}}</p>
               </div>

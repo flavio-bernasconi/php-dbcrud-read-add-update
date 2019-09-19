@@ -115,6 +115,34 @@ function addBibita(){
 }
 
 
+function addData(){
+
+  var new_nome = $('#new-nome').val();
+  var new_prezzo = $('#new-prezzo').val();
+  var new_scadenza = $('#new-scadenza').val();
+  var new_marca = $('#new-company').val();
+
+  $.ajax({
+      url : "api-add.php",
+      method : "GET",
+      data : {
+        nome : new_nome,
+        marca : new_marca,
+        prezzo: new_prezzo,
+        scadenza : new_scadenza
+      },
+      success : function(data){
+        console.log(data);
+        getBibite();
+
+
+    },//fine success
+    error: function(err){
+      console.log(err);
+    }
+  })
+
+}
 
 
 
@@ -128,6 +156,18 @@ function  init(){
 
   $(document).on("click",".btn-delete", deleteBibita);
   $(document).on("click",".btn-update", updateBibita);
-  $(document).on("click",".btn-add", addBibita);
+  // $(document).on("click",".btn-add", addBibita);
+
+  $(".btn-send").click(function(){
+    addData();
+    $(".form input").val("");
+    $(".form").hide();
+  });
+
+  $(".btn-add").click(
+    function(){
+      $(".form").toggle();
+    }
+  )
 
 }
